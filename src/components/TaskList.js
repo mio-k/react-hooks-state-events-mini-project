@@ -5,7 +5,7 @@ function TaskList({tasks, categories, setTasks, handleDeleteTasks}) {
   return (
     <div className="tasks">
       {tasks.map(task => {
-      return <Task handleDeleteTasks={handleDeleteTasks} task={task} categories={categories} setTasks={setTasks}/>
+      return <Task key={task.text} handleDeleteTasks={handleDeleteTasks} task={task} categories={categories} setTasks={setTasks}/>
       })}
       {/* display a list of tasks using Task component */}
     </div>
